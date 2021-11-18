@@ -1,0 +1,50 @@
+<ion-content class="ion-padding">
+  <div class="player-icon"></div>
+  <ion-item class="chngimg" lines="none">
+    <ion-button shape="round" class="chng-img"> Change Image </ion-button>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input placeholder="Enter Code" class="ion-text-center"></ion-input>
+  </ion-item>
+
+  <ion-button shape="round"
+  class="btns"
+  color="success"
+  style="font-size: 15px"
+  [routerLink]="['/join']"
+  routerLinkActive="router-link-active"
+  ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button>
+
+  <ion-button
+    shape="round"
+    class="btns"
+    style="font-size: 15px"
+    [routerLink]="['/create']"
+    routerLinkActive="router-link-active"
+    ><ion-icon name="create-outline"></ion-icon>CREATE</ion-button>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button
+      color="dark"
+      [routerLink]="['/login']"
+      routerLinkActive="router-link-active"
+    >
+      <ion-icon name="people-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="quizez" *ngFor="let quiz of quizzes let i = index">
+    <ion-card> </ion-card>
+    <ion-item lines="none">
+      <ion-button
+        shape="round"
+        class="view-result-btn"
+        color="success"
+        (click)="viewDetails(quiz.quiz_id, i)"
+      >
+        View Result
+      </ion-button>
+    </ion-item>
+  </div>
+</ion-content>

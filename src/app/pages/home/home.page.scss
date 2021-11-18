@@ -1,0 +1,76 @@
+ion-content{
+  --background: #fff no-repeat center center / cover;
+}
+
+ion-card {
+    height: 100px;
+    background: #c4c4c4;
+  }
+  
+  ion-fab {
+    margin-bottom: 10%;
+    margin-right: 3%;
+  }
+
+  .inputs {
+    --background: #c4c4c4;
+    --border-radius: 50px;
+    width: 80%;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .top-tabs {
+    background: #c4c4c4;
+    height: 60px;
+    border-radius: 15px;
+  }
+  
+  .btns {
+    --border-radius: 15px;
+    height: 40px;
+    width: 100%;
+    padding: 2px 16px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .player-icon {
+    width: 150px;
+    height: 150px;
+    background: #c4c4c4;
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .chngimg {
+    --background: #fff;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+
+  .chng-img {
+    --background: rgba(83, 29, 235, 0.68);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .quizez {
+    margin-left: 3.2%;
+    margin-top: 5%;
+    width: 45%;
+    float: left;
+  }
+  
+  .view-result-btn {
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    width: 100%;
+  }
+  

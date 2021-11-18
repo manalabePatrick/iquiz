@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title
+      color="primary"
+      [routerLink]="['/login']"
+      routerLinkActive="router-link-active"
+      >Login</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <img src="../../../assets/logo.jpg" alt="" />
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Name"
+      class="ion-text-center"
+      [(ngModel)]="user.name"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Email"
+      class="ion-text-center"
+      [(ngModel)]="user.email"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Password"
+      type="password"
+      class="ion-text-center"
+      [(ngModel)]="user.password"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Confirm Password"
+      type="password"
+      class="ion-text-center"
+      [(ngModel)]="user.confirmPassword"
+    ></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" shape="round" class="btn" (click)="register()">
+    Register
+  </ion-button>
+</ion-content>

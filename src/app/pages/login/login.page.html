@@ -1,0 +1,28 @@
+<ion-content class="ion-padding">
+  <img src="../../../assets/icon/logo.jpg" alt="" />
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Email"
+      class="ion-text-center"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input
+      placeholder="Password"
+      type="password"
+      class="ion-text-center"
+    ></ion-input>
+  </ion-item>
+
+  <ion-button 
+  expand="block" 
+  shape="round" 
+  class="btn" 
+  [routerLink]="['/home']"
+  routerLinkActive="router-link-active"
+  (click)="login()">
+    Login</ion-button
+  >
+</ion-content>

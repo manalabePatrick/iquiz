@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button shape="round" color="danger" class="ion-float-right" (click)="closeModal()">X</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item class="inputs title" (click)="presentAlertPrompt()">
+    <ion-input
+      placeholder="{{placeholder}}"
+      class="ion-text-center"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-input placeholder="9sdhuew4yY3" class="ion-text-center"></ion-input>
+  </ion-item>
+  <h6 class="ion-text-center">quiz code</h6>
+
+  <ion-button expand="block" color="success" shape="round"> START </ion-button>
+
+  <ion-label>Quizzers</ion-label>
+
+  <div class="quizzers">
+    <ion-item
+      lines="none"
+      class="participants"
+      *ngFor="let participant of participants let i = index"
+    >
+      {{i+1}}.
+      <div class="icon ion-float-left"></div>
+      Sample Name
+    </ion-item>
+  </div>
+</ion-content>

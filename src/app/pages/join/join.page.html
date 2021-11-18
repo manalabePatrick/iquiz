@@ -1,23 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <div class="top-tabs">
-      <ion-button shape="round" class="btns" color="warning"
-        ><ion-icon name="home-outline"></ion-icon>Home</ion-button
+      <ion-button 
+      shape="round" 
+      class="btns" 
+      color="warning"
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+      ><ion-icon name="home-outline"></ion-icon>Home</ion-button
       >
       <ion-button
         shape="round"
         class="btns"
         color="success"
-        (click)="presentAlertPrompt()"
-        ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button
-      >
-      <ion-button
-        shape="round"
-        class="btns"
         style="font-size: 12px"
-        [routerLink]="['/create']"
+        [routerLink]="['/join']"
         routerLinkActive="router-link-active"
-        ><ion-icon name="create-outline"></ion-icon>CREATE</ion-button
+        ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button
       >
     </div>
   </ion-toolbar>
@@ -25,7 +24,7 @@
 
 <ion-content class="ion-padding">
   <div class="player-icon"></div>
-  <ion-item lines="none">
+  <ion-item class="chngimg" lines="none">
     <ion-button shape="round" class="chng-img"> Change Image </ion-button>
   </ion-item>
 

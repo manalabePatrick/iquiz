@@ -1,0 +1,71 @@
+ion-content{
+  --background: #fff no-repeat center center / cover;
+}
+
+ion-card {
+    --background: #c4c4c4;
+  }
+  
+  h6 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .qstions {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border-radius: 25px;
+  }
+  
+  .create-quiz-btn {
+    width: 50%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .choices {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border-radius: 25px;
+  }
+  
+  .add-qstion {
+    width: 19em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sml-btn {
+    height: 1.9em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .top-tabs {
+    background: #c4c4c4;
+    height: 60px;
+    border-radius: 15px;
+  }
+  
+  .btns {
+    margin-top: 1.1%;
+    height: 50px;
+    width: 31.5%;
+    --border-radius: 15px;
+    margin-left: 1.2%;
+  }
+  
+  .inputs {
+    --background: #c4c4c4;
+    --border-radius: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+  }
+  

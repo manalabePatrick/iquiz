@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Home-page" icon="home" defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h5 class="ion-text-center">CREATE QUIZ</h5>
+
+  <ion-item class="inputs">
+    <ion-input placeholder="Title" class="ion-text-center"></ion-input>
+  </ion-item>
+
+  <div *ngFor="let question of questions let i = index">
+    <ion-card>
+      <ion-item class="qstions">
+        <ion-textarea autoGrow="true" placeholder="Question"></ion-textarea>
+      </ion-item>
+      <ion-item lines="none" color="none">
+        <ion-button shape="round" class="chng-img"> Add Option</ion-button>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item lines="none" color="none" class="ion-float-left">
+        <ion-button shape="round" class="chng-img"> Answer </ion-button>
+      </ion-item>
+      <ion-item lines="none" color="none" class="ion-float-left">
+        <ion-button shape="round" class="chng-img"> Score </ion-button>
+      </ion-item>
+      <ion-item color="none" lines="none" class="ion-float-right">
+        <ion-button shape="round" color="danger" (click)="removeQuestion(i)"
+          ><ion-icon name="trash-outline"></ion-icon> Del
+        </ion-button>
+      </ion-item></ion-card
+    >
+  </div>
+
+  <ion-card class="add-qstion">
+    <ion-item class="choices">
+      <h6>Multiple Choice</h6>
+    </ion-item>
+    <ion-item color="none" lines="none">
+      <ion-button shape="round" class="sml-btn" (click)="addQuestion()"
+        ><ion-icon name="add-circle-outline"></ion-icon> Add Question
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-button
+    expand="block"
+    class="create-quiz-btn"
+    shape="round"
+    (click)="createQuiz()"
+  >
+    CREATE
+  </ion-button>
+</ion-content>

@@ -1,0 +1,44 @@
+ion-content{
+  --background: #fff no-repeat center center / cover;
+}
+
+h6 {
+    margin-top: 0;
+  }
+  
+  .inputs {
+    --background: #c4c4c4;
+    --border-radius: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title {
+    --background: rgb(0, 110, 255);
+    margin-bottom: 3em;
+  }
+  
+  .quizzers {
+    width: 100%;
+    background: #c4c4c4;
+    border-radius: 30px;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .participants {
+    --background: rgba(83, 29, 235, 0.68);
+    border-radius: 30px;
+    margin-bottom: 1em;
+  }
+  
+  .icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 30px;
+    background: white;
+    margin-left: 1.3em;
+    margin-right: 3em;
+  }
+  
