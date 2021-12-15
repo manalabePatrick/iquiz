@@ -2,17 +2,40 @@
   <img src="../../../assets/icon/logo.jpg" alt="" />
 
   <ion-item class="inputs">
-    <ion-input placeholder="Email" class="ion-text-center"></ion-input>
+    <ion-input
+      placeholder="Email"
+      class="ion-text-center"
+      type="email"
+      [(ngModel)]="credentials.email"
+    ></ion-input>
   </ion-item>
 
   <ion-item class="inputs">
-    <ion-input placeholder="Password" type="password" class="ion-text-center"></ion-input>
+    <ion-input
+      placeholder="Password"
+      type="password"
+      class="ion-text-center"
+      [(ngModel)]="credentials.password"
+    ></ion-input>
   </ion-item>
 
-  <ion-button expand="block" shape="round" class="btn" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="login()">Login</ion-button>
+  <ion-button expand="block" shape="round" class="btn" (click)="login()"
+    >Login</ion-button
+  >
 
-  <p class="fpassword" [routerLink]="['/forgot-password']" routerLinkActive="router-link-active" (click)="forgot-password()">Forgot Password?</p>
+  <p
+    class="fpassword"
+    [routerLink]="['/forgot-password']"
+    routerLinkActive="router-link-active"
+  >
+    Forgot Password?
+  </p>
 
-  <p class="signup" [routerLink]="['/register']" routerLinkActive="router-link-active" (click)="register()">Sign Up</p>
-
+  <p
+    class="signup"
+    [routerLink]="['/register']"
+    routerLinkActive="router-link-active"
+  >
+    Sign Up
+  </p>
 </ion-content>
