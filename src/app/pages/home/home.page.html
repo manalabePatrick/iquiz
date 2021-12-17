@@ -1,23 +1,30 @@
 <ion-content class="ion-padding">
-  <div class="player-icon"></div>
-  <ion-item class="chngimg" lines="none">
-    <ion-button shape="round" class="chng-img"> Change Image </ion-button>
+  <img
+    src="../../../assets/avatars/{{imageNumber}}.png"
+    alt=""
+    class="avatar"
+  />
+
+  <ion-item class="chngimg" lines="none" (click)="changeImage()">
+    <ion-button shape="round" class="chng-img">
+      <ion-icon name="image-outline"></ion-icon>Change
+    </ion-button>
   </ion-item>
 
   <ion-item class="inputs">
     <ion-input
       shape="round"
       placeholder="Enter Code"
-      class="ion-text-center"
+      class="ion-text-start"
     ></ion-input>
     <ion-button
       shape="round"
-      class="join"
+      class="join ion-float-right"
       color="success"
       style="font-size: 15px"
       [routerLink]="['/join']"
       routerLinkActive="router-link-active"
-      ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button
+      >Join</ion-button
     >
   </ion-item>
 
@@ -27,27 +34,36 @@
     style="font-size: 15px"
     [routerLink]="['/create']"
     routerLinkActive="router-link-active"
-    ><ion-icon name="create-outline"></ion-icon>CREATE QUIZ</ion-button
+    >CREATE QUIZ</ion-button
   >
 
   <ion-item class="myquiz" lines="none">
     <ion-label class="ion-text-center">MY QUIZ</ion-label>
   </ion-item>
 
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <h6 class="ion-text-center">RECENT</h6>
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed">
     <ion-fab-button
-      color="dark"
+      color="danger"
       [routerLink]="['/login']"
       routerLinkActive="router-link-active"
     >
-      <ion-icon name="people-outline"></ion-icon>
+      <ion-icon name="log-out-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
-  <div class="quizez">
-    <ion-card> </ion-card>
+  <div class="quizez" *ngFor="let quiz of quizzes">
+    <h6 class="score-label" maxlength="10">Final Quiz Semester One sdsd</h6>
+
+    <ion-card class="score-box"> </ion-card>
     <ion-item lines="none">
-      <ion-button shape="round" class="view-result-btn" color="success">
+      <ion-button
+        shape="round"
+        class="view-result-btn"
+        color="success"
+        (click)="presentAlert()"
+      >
         Result
       </ion-button>
     </ion-item>
