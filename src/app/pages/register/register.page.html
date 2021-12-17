@@ -1,7 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="login" text="" icon="arrow-back-circle-sharp"></ion-back-button>
+      <ion-back-button
+        defaultHref="login"
+        text=""
+        icon="arrow-back-circle-sharp"
+      ></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +17,8 @@
     <ion-input
       placeholder="Name"
       class="ion-text-center"
-
+      type="text"
+      [(ngModel)]="credentials.name"
     ></ion-input>
   </ion-item>
 
@@ -21,7 +26,8 @@
     <ion-input
       placeholder="Email"
       class="ion-text-center"
-
+      type="email"
+      [(ngModel)]="credentials.email"
     ></ion-input>
   </ion-item>
 
@@ -30,7 +36,7 @@
       placeholder="Password"
       type="password"
       class="ion-text-center"
-
+      [(ngModel)]="credentials.password"
     ></ion-input>
   </ion-item>
 
@@ -39,7 +45,7 @@
       placeholder="Confirm Password"
       type="password"
       class="ion-text-center"
-
+      [(ngModel)]="credentials.confirmPass"
     ></ion-input>
   </ion-item>
 

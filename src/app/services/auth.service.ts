@@ -19,6 +19,12 @@ export class AuthService {
         return this.http.get(URL).toPromise();
 
       }
+      
+      if(requestObject.METHOD === 'post'){
+
+        const URL = `${this.BASE_URL}/${requestObject.LOCATION}`
+        return this.http.post(URL, requestObject.BODY).toPromise();
+      }
 
   }
 }
