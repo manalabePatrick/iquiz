@@ -1,76 +1,95 @@
-ion-content{
+ion-content {
   --background: #fff no-repeat center center / cover;
 }
 
 ion-card {
-    height: 100px;
-    background: #c4c4c4;
-  }
-  
-  ion-fab {
-    margin-bottom: 10%;
-    margin-right: 3%;
-  }
+  height: 100px;
+  background: #c4c4c4;
+}
 
-  .inputs {
-    --background: #c4c4c4;
-    --border-radius: 50px;
-    width: 80%;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .top-tabs {
-    background: #c4c4c4;
-    height: 60px;
-    border-radius: 15px;
-  }
-  
-  .btns {
-    --border-radius: 15px;
-    height: 40px;
-    width: 100%;
-    padding: 2px 16px;
+ion-fab {
+  margin-bottom: 10%;
+  margin-right: 3%;
+}
 
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .player-icon {
-    width: 150px;
-    height: 150px;
-    background: #c4c4c4;
-    display: block;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.join {
+  height: 100%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .chngimg {
-    --background: #fff;
-    margin-bottom: auto;
-    margin-right: auto;
-  }
+.inputs {
+  color: black;
+  --background: #c4c4c4;
+  --border-radius: 50px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .chng-img {
-    --background: rgba(83, 29, 235, 0.68);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  
-  .quizez {
-    margin-left: 3.2%;
-    margin-top: 5%;
-    width: 45%;
-    float: left;
-  }
-  
-  .view-result-btn {
-    margin-left: auto;
-    margin-right: auto;
-    height: 30px;
-    width: 100%;
-  }
-  
+.top-tabs {
+  background: #c4c4c4;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.btns-create {
+  color: black;
+  --border-radius: 20px;
+  height: 45px;
+  width: 60%;
+  padding: 2px 16px;
+  display: block;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player-icon {
+  width: 150px;
+  height: 150px;
+  background: #c4c4c4;
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chngimg {
+  color: black;
+  --background: #fff;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+
+.chng-img {
+  --background: rgba(83, 29, 235, 0.68);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myquiz {
+  color: black;
+  --background: #ebb11d;
+  --border-radius: 50px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quizez {
+  margin-left: 3.2%;
+  margin-top: 5%;
+  width: 45%;
+  float: left;
+}
+
+.view-result-btn {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 100%;
+}

@@ -5,24 +5,34 @@
   </ion-item>
 
   <ion-item class="inputs">
-    <ion-input placeholder="Enter Code" class="ion-text-center"></ion-input>
+    <ion-input
+      shape="round"
+      placeholder="Enter Code"
+      class="ion-text-center"
+    ></ion-input>
+    <ion-button
+      shape="round"
+      class="join"
+      color="success"
+      style="font-size: 15px"
+      [routerLink]="['/join']"
+      routerLinkActive="router-link-active"
+      ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button
+    >
   </ion-item>
-
-  <ion-button shape="round"
-  class="btns"
-  color="success"
-  style="font-size: 15px"
-  [routerLink]="['/join']"
-  routerLinkActive="router-link-active"
-  ><ion-icon name="people-circle-outline"></ion-icon>Join</ion-button>
 
   <ion-button
     shape="round"
-    class="btns"
+    class="btns-create"
     style="font-size: 15px"
     [routerLink]="['/create']"
     routerLinkActive="router-link-active"
-    ><ion-icon name="create-outline"></ion-icon>CREATE</ion-button>
+    ><ion-icon name="create-outline"></ion-icon>CREATE QUIZ</ion-button
+  >
+
+  <ion-item class="myquiz" lines="none">
+    <ion-label class="ion-text-center">MY QUIZ</ion-label>
+  </ion-item>
 
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button
@@ -34,16 +44,11 @@
     </ion-fab-button>
   </ion-fab>
 
-  <div class="quizez" *ngFor="let quiz of quizzes let i = index">
+  <div class="quizez">
     <ion-card> </ion-card>
     <ion-item lines="none">
-      <ion-button
-        shape="round"
-        class="view-result-btn"
-        color="success"
-        (click)="viewDetails(quiz.quiz_id, i)"
-      >
-        View Result
+      <ion-button shape="round" class="view-result-btn" color="success">
+        Result
       </ion-button>
     </ion-item>
   </div>
