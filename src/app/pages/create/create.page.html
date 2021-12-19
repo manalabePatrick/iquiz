@@ -53,7 +53,12 @@
     </ion-item>
 
     <ion-item class="qstions">
-      <ion-textarea rows="3" placeholder="Question"></ion-textarea>
+      <ion-textarea
+        rows="3"
+        placeholder="Question"
+        [(ngModel)]="questions[i].question"
+        required
+      ></ion-textarea>
     </ion-item>
     <h6 *ngFor="let option of options">
       a. The boy
@@ -71,7 +76,7 @@
         shape="round"
         class="chng-img"
         color="success"
-        (click)="addOption(i)"
+        (click)="presentOption(i)"
       >
         Add Option</ion-button
       >

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-create',
@@ -8,18 +9,33 @@ import { Component, OnInit } from '@angular/core';
 export class CreatePage implements OnInit {
 
   questions:any = [];
-  question:any = {}
-  options:any = [];
-  option:string = '';
+  generateQuestion:any =[];
 
-  constructor() { }
+  question:any = {
+    question: '',
+    options: []
+  }
+
+  options:any = [];
+  option:string = 'sample';
+
+  questionText:string = '';
+
+ 
+  constructor(private alertController: AlertController) { }
+
 
   ngOnInit() {
+
+    
+    // this.sample[1].title = 'changed';
+    // console.log(this.sample[1]);
+    // console.log(this.sample);
+
       // console.log(String.fromCharCode(94 + 3)); convert number to letter, a starts at number 3
   }
 
   addQuestion(){
-
     this.questions.push(this.question);
   }
 
@@ -28,9 +44,44 @@ export class CreatePage implements OnInit {
   }
 
   addOption(index){
-    // console.log(index);
-    this.options.push(this.option);
-    console.log(this.options);
+
+    this.questions[index] = this.questionText;
+    // this.options.push(this.option);
+    // this.questions[index].options = this.options;
+    // console.log(this.questions[index]);
+
+    console.log(this.question);
+  }
+
+  async presentOption(index) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      inputs: [
+        {
+          name: 'name1',
+          type: 'text',
+          placeholder: 'Answer'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            // console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            // console.log('Confirm Ok');
+            this.addOption(index);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }
